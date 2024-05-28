@@ -5,19 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TESTapp1"
         mc:Ignorable="d"
-        Title="TESTapplication" Height="300" Width="200">
+        Title="Controller Tester" Height="150" Width="200">
     <Grid Margin="3,7,3,3">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="JoyStick" FontSize="12"/>
     </Grid>
 </Window>
