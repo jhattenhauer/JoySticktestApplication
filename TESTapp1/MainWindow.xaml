@@ -5,39 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TESTapp1"
         mc:Ignorable="d"
-        Title="Controller Tester" Height="300" Width="400">
-   
-    <Grid Margin="20,3,3,3" HorizontalAlignment="Left" VerticalAlignment="center">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        Title="Controller Tester" Height="250" Width="400" Background="DarkGray" BorderBrush="Gray" BorderThickness="5" ResizeMode="NoResize">
+    <Grid>
+        <!--Master Grid-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Name="button1" Width="25" Height="25"  Grid.Row="1"
-        Grid.Column="0" Content="1" FontSize="10" Margin="5,5,5,5" Click="Button_Click" ClickMode="Press"/>
-        <Button Name="button2" Width="25" Height="25"  Grid.Row="1"
-        Grid.Column="1" Content="2" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button3" Width="25" Height="25"  Grid.Row="1"
-        Grid.Column="2" Content="3" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button4" Width="25" Height="25"  Grid.Row="1"
-        Grid.Column="3" Content="4" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button5" Width="25" Height="25"  Grid.Row="2"
-        Grid.Column="0" Content="5" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button6" Width="25" Height="25"  Grid.Row="2"
-        Grid.Column="1" Content="6" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button7" Width="25" Height="25"  Grid.Row="2"
-        Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="button8" Width="25" Height="25"  Grid.Row="2"
-        Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="Reset" Width="25" Height="25" Grid.Row="0"
-        Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" ClickMode="Press"/>
-        <Button Name="Next" Width="25" Height="25" Grid.Row="0"
-        Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5" ClickMode="Press"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <!--Controller Input-->
+        <Border BorderThickness="3" Grid.Column="1" Grid.Row="1" Margin="0,0,4,0">
+            <Canvas Height="100" Width="100" Background="white">
+                <Ellipse Height="10" Width="10" Fill="Cyan" Canvas.Left="85" Canvas.Top="75"/>
+            </Canvas>
+        </Border>
+
+        <!--Button Label-->
+        <Border Margin="3,3,3,3" Background="black">
+            <TextBlock Name="Title" Width="100" Height="30" TextAlignment="Center" Text="Buttons" VerticalAlignment="Center"
+             HorizontalAlignment="Center" Grid.Row="0" Background="LightGray"/>
+        </Border>
+        <TextBlock Height="15" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top"
+             HorizontalAlignment="Right" Margin="0,0,2,0" Background="DarkGray">
+            <Run Text="GR" Foreground="Black"/>
+            <Run Text="i" Foreground="Cyan" FontSize="10"/>
+            <Run Text=" Simulations" Foreground="Black"/>
+        </TextBlock>
+
+        <!--Main Button Grid within master grid-->
+        <Grid Margin="20,3,3,3" HorizontalAlignment="Left" VerticalAlignment="center" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Buttons-->
+            <Button x:Name="Button1" Width="25" Height="25"  Grid.Row="1"
+            Grid.Column="0" Content="1" FontSize="10" Margin="5,5,5,5" Click="Button1_Click"/>
+            <Button x:Name="Button2" Width="25" Height="25"  Grid.Row="1"
+            Grid.Column="1" Content="2" FontSize="10" Margin="5,5,5,5" Click="Button2_Click"/>
+            <Button x:Name="Button3" Width="25" Height="25"  Grid.Row="1"
+            Grid.Column="2" Content="3" FontSize="10" Margin="5,5,5,5" Click="Button3_Click"/>
+            <Button x:Name="Button4" Width="25" Height="25"  Grid.Row="1"
+            Grid.Column="3" Content="4" FontSize="10" Margin="5,5,5,5" Click="Button4_Click"/>
+            <Button x:Name="Button5" Width="25" Height="25"  Grid.Row="2"
+            Grid.Column="0" Content="5" FontSize="10" Margin="5,5,5,5" Click="Button5_Click"/>
+            <Button x:Name="Button6" Width="25" Height="25"  Grid.Row="2"
+            Grid.Column="1" Content="6" FontSize="10" Margin="5,5,5,5" Click="Button6_Click"/>
+            <Button x:Name="Button7" Width="25" Height="25"  Grid.Row="2"
+            Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5" Click="Button7_Click"/>
+            <Button x:Name="Button8" Width="25" Height="25"  Grid.Row="2"
+            Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5" Click="Button8_Click"/>
+            <Button x:Name="Reset" Width="25" Height="25" Grid.Row="0"
+            Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" Click="Reset_Click"/>
+            <Button x:Name="Next" Width="25" Height="25" Grid.Row="0"
+            Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5" Click="Next_Click"/>
+
+            <!--Controller Input-->
+
+        </Grid>
     </Grid>
 </Window>

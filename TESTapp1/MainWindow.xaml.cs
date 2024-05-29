@@ -9,6 +9,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/* Possible gamecontroller input reading
+using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Threading;
+using SharpDX.XInput;
+*/
+
 namespace TESTapp1
 {
     /// <summary>
@@ -21,6 +29,54 @@ namespace TESTapp1
             InitializeComponent();
         }
 
-        
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button6_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button7_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button8_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
