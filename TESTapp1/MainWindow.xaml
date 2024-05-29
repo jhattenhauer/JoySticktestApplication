@@ -5,12 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TESTapp1"
         mc:Ignorable="d"
-        Title="Controller Tester" Height="150" Width="200">
-    <Grid Margin="3,7,3,3">
-        <Grid.ColumnDefinitions>
-        </Grid.ColumnDefinitions>
+        Title="Controller Tester" Height="300" Width="400">
+   
+    <Grid Margin="20,3,3,3" HorizontalAlignment="Left" VerticalAlignment="center">
         <Grid.RowDefinitions>
-            
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Name="button1" Width="25" Height="25"  Grid.Row="1"
+        Grid.Column="0" Content="1" FontSize="10" Margin="5,5,5,5" Click="Button_Click" ClickMode="Press"/>
+        <Button Name="button2" Width="25" Height="25"  Grid.Row="1"
+        Grid.Column="1" Content="2" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button3" Width="25" Height="25"  Grid.Row="1"
+        Grid.Column="2" Content="3" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button4" Width="25" Height="25"  Grid.Row="1"
+        Grid.Column="3" Content="4" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button5" Width="25" Height="25"  Grid.Row="2"
+        Grid.Column="0" Content="5" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button6" Width="25" Height="25"  Grid.Row="2"
+        Grid.Column="1" Content="6" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button7" Width="25" Height="25"  Grid.Row="2"
+        Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="button8" Width="25" Height="25"  Grid.Row="2"
+        Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="Reset" Width="25" Height="25" Grid.Row="0"
+        Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" ClickMode="Press"/>
+        <Button Name="Next" Width="25" Height="25" Grid.Row="0"
+        Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5" ClickMode="Press"/>
     </Grid>
 </Window>
