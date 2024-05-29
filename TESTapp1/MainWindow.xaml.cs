@@ -29,54 +29,40 @@ namespace TESTapp1
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, RoutedEventArgs e)
+        
+        //Moving Pointer, mapped to number keys rn
+        private void GoUp(object sender, RoutedEventArgs e)
         {
-            
+            if (position.Y > 10)
+            {
+                position.Y = position.Y - 1;
+            }
         }
-
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        private void GoLeft(object sender, RoutedEventArgs e)
         {
-            
+            if (position.X > 10)
+            {
+                position.X = position.X - 1;
+            }
         }
-
-        private void Button3_Click(object sender, RoutedEventArgs e)
+        private void GoDown(object sender, RoutedEventArgs e)
         {
-            
+            if (position.Y < 140)
+            {
+                position.Y = position.Y + 1;
+            }
         }
-
-        private void Button4_Click(object sender, RoutedEventArgs e)
+        private void GoRight(object sender, RoutedEventArgs e)
         {
-            
+            if (position.X < 140)
+            {
+                position.X = position.X + 1;
+            }
         }
-
-        private void Button5_Click(object sender, RoutedEventArgs e)
+        private void GoReset(object sender, RoutedEventArgs e)
         {
-            
-        }
-
-        private void Button6_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button7_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button8_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Reset_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Next_Click(object sender, RoutedEventArgs e)
-        {
-            
+            position.X = 70;
+            position.Y = 70;
         }
     }
 }

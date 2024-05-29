@@ -18,12 +18,41 @@
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
 
-        <!--Controller Input-->
+        <!--Controller Pointer-->
         <Border BorderThickness="3" Grid.Column="1" Grid.Row="1" Margin="0,0,4,0">
-            <Canvas Height="100" Width="100" Background="white">
-                <Ellipse Height="10" Width="10" Fill="Cyan" Canvas.Left="85" Canvas.Top="75"/>
+            <Canvas Height="150" Width="150" Background="white">
+                <Ellipse x:Name="pointer" Height="10" Width="10" Fill="Cyan" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform x:Name="position" X="70" Y="70"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
             </Canvas>
         </Border>
+           <!--Contains Test Buttons-->
+        <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Height="17" Width="17" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0"
+                    Content="RE" Click="GoReset"/> <!--click works, only one cycle-->
+            <Button Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"
+                    Content="U" MouseDown="GoUp"/> <!--This is not working rn-->
+            <RepeatButton Height="17" Width="17" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"
+                    Content="L" MouseDown="GoLeft"/> <!--look into this more-->
+            <Button Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"
+                    Content="D" MouseDown="GoDown"/>
+            <Button Height="17" Width="17" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2"
+                    Content="R" Click="GoRight"/> <!--for testing with reset-->
+
+        </Grid>
 
         <!--Button Label-->
         <Border Margin="3,3,3,3" Background="black">
@@ -54,27 +83,25 @@
 
             <!--Buttons-->
             <Button x:Name="Button1" Width="25" Height="25"  Grid.Row="1"
-            Grid.Column="0" Content="1" FontSize="10" Margin="5,5,5,5" Click="Button1_Click"/>
+            Grid.Column="0" Content="1" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button2" Width="25" Height="25"  Grid.Row="1"
-            Grid.Column="1" Content="2" FontSize="10" Margin="5,5,5,5" Click="Button2_Click"/>
+            Grid.Column="1" Content="2" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button3" Width="25" Height="25"  Grid.Row="1"
-            Grid.Column="2" Content="3" FontSize="10" Margin="5,5,5,5" Click="Button3_Click"/>
+            Grid.Column="2" Content="3" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button4" Width="25" Height="25"  Grid.Row="1"
-            Grid.Column="3" Content="4" FontSize="10" Margin="5,5,5,5" Click="Button4_Click"/>
+            Grid.Column="3" Content="4" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button5" Width="25" Height="25"  Grid.Row="2"
-            Grid.Column="0" Content="5" FontSize="10" Margin="5,5,5,5" Click="Button5_Click"/>
+            Grid.Column="0" Content="5" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button6" Width="25" Height="25"  Grid.Row="2"
-            Grid.Column="1" Content="6" FontSize="10" Margin="5,5,5,5" Click="Button6_Click"/>
+            Grid.Column="1" Content="6" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button7" Width="25" Height="25"  Grid.Row="2"
-            Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5" Click="Button7_Click"/>
+            Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button8" Width="25" Height="25"  Grid.Row="2"
-            Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5" Click="Button8_Click"/>
+            Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Reset" Width="25" Height="25" Grid.Row="0"
-            Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" Click="Reset_Click"/>
+            Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5"/>
             <Button x:Name="Next" Width="25" Height="25" Grid.Row="0"
-            Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5" Click="Next_Click"/>
-
-            <!--Controller Input-->
+            Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5"/>
 
         </Grid>
     </Grid>
