@@ -41,16 +41,15 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Height="17" Width="17" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0"
-                    Content="RE" Click="GoReset"/> <!--click works, only one cycle-->
-            <Button Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"
-                    Content="U" MouseDown="GoUp"/> <!--This is not working rn-->
+           
+            <RepeatButton Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"
+                    Content="U" Delay="500" Interval="10"  Click="GoUp"/>
             <RepeatButton Height="17" Width="17" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"
-                    Content="L" MouseDown="GoLeft"/> <!--look into this more-->
-            <Button Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"
-                    Content="D" MouseDown="GoDown"/>
-            <Button Height="17" Width="17" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2"
-                    Content="R" Click="GoRight"/> <!--for testing with reset-->
+                    Content="L" Delay="500" Interval="10" Click="GoLeft"/> 
+            <RepeatButton Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"
+                    Content="D" Delay="500" Interval="10" Click="GoDown"/>
+            <RepeatButton Height="17" Width="17" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2"
+                    Content="R" Delay="500" Interval="10" Click="GoRight"/> 
 
         </Grid>
 
@@ -59,8 +58,8 @@
             <TextBlock Name="Title" Width="100" Height="30" TextAlignment="Center" Text="Buttons" VerticalAlignment="Center"
              HorizontalAlignment="Center" Grid.Row="0" Background="LightGray"/>
         </Border>
-        <TextBlock Height="15" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top"
-             HorizontalAlignment="Right" Margin="0,0,2,0" Background="DarkGray">
+        <TextBlock Height="15" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top"
+             HorizontalAlignment="Left" Margin="0,0,2,0" Background="DarkGray">
             <Run Text="GR" Foreground="Black"/>
             <Run Text="i" Foreground="Cyan" FontSize="10"/>
             <Run Text=" Simulations" Foreground="Black"/>
@@ -99,7 +98,7 @@
             <Button x:Name="Button8" Width="25" Height="25"  Grid.Row="2"
             Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Reset" Width="25" Height="25" Grid.Row="0"
-            Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5"/>
+            Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" Click="GoReset"/>
             <Button x:Name="Next" Width="25" Height="25" Grid.Row="0"
             Grid.Column="1" Content="Next" FontSize="9" Margin="5,5,5,5"/>
 

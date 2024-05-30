@@ -29,7 +29,7 @@ namespace TESTapp1
             InitializeComponent();
         }
 
-        
+
         //Moving Pointer, mapped to number keys rn
         private void GoUp(object sender, RoutedEventArgs e)
         {
