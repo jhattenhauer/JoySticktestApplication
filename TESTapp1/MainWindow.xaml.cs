@@ -33,14 +33,14 @@ namespace TESTapp1
         //Moving Pointer, mapped to number keys rn
         private void GoUp(object sender, RoutedEventArgs e)
         {
-            if (position.Y > 10)
+            if (position.Y > 1)
             {
                 position.Y = position.Y - 1;
             }
         }
         private void GoLeft(object sender, RoutedEventArgs e)
         {
-            if (position.X > 10)
+            if (position.X > 1)
             {
                 position.X = position.X - 1;
             }

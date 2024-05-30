@@ -40,3 +40,6 @@ C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\obj\Debug\net8.
 C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\obj\Debug\net8.0-windows\TESTapp1.genruntimeconfig.cache
 C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\obj\Debug\net8.0-windows\ref\TESTapp1.dll
 C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\obj\Debug\net8.0-windows\TESTapp1.csproj.AssemblyReference.cache
+C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\bin\Debug\net8.0-windows\SharpDX.dll
+C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\bin\Debug\net8.0-windows\SharpDX.XInput.dll
+C:\Users\James\Documents\GitHub\JoySticktestApplication\TESTapp1\obj\Debug\net8.0-windows\TESTapp1.csproj.Up2Date
