@@ -49,6 +49,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "HIDDevices": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "SharpDX.XInput": {
               "target": "Package",
               "version": "[4.2.0, )"
