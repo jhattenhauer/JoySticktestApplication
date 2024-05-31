@@ -31,7 +31,7 @@
                 </Ellipse>
             </Canvas>
         </Border>
-           <!--Contains Test Buttons-->
+        <!--Contains Test Buttons-->
         <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -42,15 +42,17 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-           
+
             <RepeatButton Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"
                     Content="U" Delay="500" Interval="10"  Click="GoUp"/>
             <RepeatButton Height="17" Width="17" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"
-                    Content="L" Delay="500" Interval="10" Click="GoLeft"/> 
+                    Content="L" Delay="500" Interval="10" Click="GoLeft"/>
             <RepeatButton Height="17" Width="17" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"
                     Content="D" Delay="500" Interval="10" Click="GoDown"/>
             <RepeatButton Height="17" Width="17" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2"
-                    Content="R" Delay="500" Interval="10" Click="GoRight"/> 
+                    Content="R" Delay="500" Interval="10" Click="GoRight"/>
+            <RepeatButton Height="17" Width="17" Content="T" Grid.Row="0" Grid.Column="0" Delay="500"
+                          Interval="10" Click="RepeatButton_Click" Name="testing" Background="Purple"/>
 
         </Grid>
 

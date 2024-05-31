@@ -31,12 +31,7 @@ namespace TESTapp1
         {
             InitializeComponent();
             //Xinput logif
-            var controller = new Controller(UserIndex.One);
-            if (controller.IsConnected)
-            {
-                Gamepad gamepad = controller.GetState().Gamepad;
-                Console.WriteLine(gamepad.ToString());
-            }
+            
         }
         
 
@@ -45,34 +40,46 @@ namespace TESTapp1
         {
             if (position.Y > 1)
             {
-                position.Y = position.Y--;
+                position.Y = position.Y - 1;
             }
         }
         private void GoLeft(object sender, RoutedEventArgs e)
         {
             if (position.X > 1)
             {
-                position.X = position.X--;
+                position.X = position.X - 1;
             }
         }
         private void GoDown(object sender, RoutedEventArgs e)
         {
             if (position.Y < 140)
             {
-                position.Y = position.Y++;
+                position.Y = position.Y + 1;
             }
         }
         private void GoRight(object sender, RoutedEventArgs e)
         {
             if (position.X < 140)
             {
-                position.X = position.X++;
+                position.X = position.X + 1;
             }
         }
         private void GoReset(object sender, RoutedEventArgs e)
         {
             position.X = 70;
             position.Y = 70;
+        }
+
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (testing.Background == Brushes.White)
+            {
+                testing.Background = Brushes.Red;
+            }
+            else
+            {
+                testing.Background = Brushes.White;
+            }
         }
     }
 }
