@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HIDDevices" Version="4.0.2" />
-    <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
+    <PackageReference Include="SharpDX.DirectInput" Version="3.0.1" />
   </ItemGroup>
 
 </Project>

@@ -13,7 +13,4 @@
     <SourceRoot Include="C:\Users\James\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_VisualStudio_Threading_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_Threading_Analyzers)' == '' ">C:\Users\James\.nuget\packages\microsoft.visualstudio.threading.analyzers\17.9.28</PkgMicrosoft_VisualStudio_Threading_Analyzers>
-  </PropertyGroup>
 </Project>
