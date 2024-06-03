@@ -99,15 +99,73 @@ namespace TESTapp1
                     position.Y = position.Y + 0.1;
                 }
 
-                if (_state.Buttons[0] == true)
+                for (int i = 0; i < _state.Buttons.Length; i++)
                 {
-                    Button1.Background = Brushes.Red;
+                    if (_state.Buttons[i] == true)
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                Button1.Background = Brushes.Red;
+                                break;
+                            case 1:
+                                Button2.Background = Brushes.Red;
+                                break;
+                            case 2:
+                                Button3.Background = Brushes.Red;
+                                break;
+                            case 3:
+                                Button4.Background = Brushes.Red;
+                                break;
+                            case 4:
+                                Button5.Background = Brushes.Red;
+                                break;
+                            case 5:
+                                Button6.Background = Brushes.Red;
+                                break;
+                            case 6:
+                                Button7.Background = Brushes.Red;
+                                break;
+                            case 7:
+                                Button8.Background = Brushes.Red;
+                                break;
+                            case 8:
+                                position.Y = 70;
+                                position.X = 70;
+                                break;
+                        }
+                    }
+                    if (_state.Buttons[i] == false)
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                Button1.Background = Brushes.White;
+                                break;
+                            case 1:
+                                Button2.Background = Brushes.White;
+                                break;
+                            case 2:
+                                Button3.Background = Brushes.White;
+                                break;
+                            case 3:
+                                Button4.Background = Brushes.White;
+                                break;
+                            case 4:
+                                Button5.Background = Brushes.White;
+                                break;
+                            case 5:
+                                Button6.Background = Brushes.White;
+                                break;
+                            case 6:
+                                Button7.Background = Brushes.White;
+                                break;
+                            case 7:
+                                Button8.Background = Brushes.White;
+                                break;
+                        }
+                    }
                 }
-                else
-                {
-                    Button1.Background = Brushes.White;
-                }
-                    
             }
         }
 
