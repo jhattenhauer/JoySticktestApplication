@@ -130,6 +130,7 @@ namespace TESTapp1
                                 Button8.Background = Brushes.Red;
                                 break;
                             case 8:
+                                Reset.Background = Brushes.Red;
                                 position.Y = 70;
                                 position.X = 70;
                                 break;
@@ -161,6 +162,9 @@ namespace TESTapp1
                                 Button7.Background = Brushes.White;
                                 break;
                             case 7:
+                                Button8.Background = Brushes.White;
+                                break;
+                            case 8:
                                 Button8.Background = Brushes.White;
                                 break;
                         }
