@@ -20,6 +20,7 @@ using System.Windows.Xps;
 using System.Security.Cryptography.X509Certificates;
 using System.Numerics;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 
 namespace TESTapp1
@@ -67,42 +68,46 @@ namespace TESTapp1
             timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
             timer.Start();
         }
-
+        
         private void timer_Tick(object sender, EventArgs e)
         {
+            var _state = _joyStick.GetCurrentState();
             _joyStick.Poll();
+            Trace.WriteLine(_state.ToString());
+
             var data = _joyStick.GetBufferedData();
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            using (StreamWriter outputFile = new StreamWriter(System.IO.Path.Combine(docPath, "WriteLines.txt")))
+            outputFile.WriteLine(_state);
+            
             foreach (var line in data)
-            { 
-                string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                using (StreamWriter outputFileY = new StreamWriter(System.IO.Path.Combine(docPath, "OutputY.txt"), true))
-                using (StreamWriter outputFileX = new StreamWriter(System.IO.Path.Combine(docPath, "OutputX.txt"), true))
+            {
+                if (line.Offset == JoystickOffset.X && line.Value > 35000 && position.X > 1)
                 {
-                    if (line.Offset == JoystickOffset.X && line.Value > 35000 && position.X > 1)
-                    {
-                        position.X = position.X - 0.1;
-                    }
-                    if (line.Offset == JoystickOffset.X && line.Value < 30000 && position.X < 140)
-                    {
-                        position.X = position.X + 0.1;
-                    }
-                    if (line.Offset == JoystickOffset.Y && line.Value > 35000 && position.Y > 1)
-                    {
-                        position.Y = position.Y - 0.1;
-                    }
-                    if (line.Offset == JoystickOffset.Y && line.Value < 30000 && position.Y < 140)
-                    {
-                        position.Y = position.Y + 0.1;
-                    }
-                    if (line.Offset == JoystickOffset.Y)
-                    {
-                        outputFileY.WriteLine($"{line.Offset} Value: {line.Value}\n");
-                    }
-                    if (line.Offset == JoystickOffset.X)
-                    {
-                        outputFileX.WriteLine($"{line.Offset} Value: {line.Value}\n");
-                    }
+                    position.X = position.X - 0.1;
                 }
+                if (line.Offset == JoystickOffset.X && line.Value < 30000 && position.X < 140)
+                {
+                    position.X = position.X + 0.1;
+                }
+                if (line.Offset == JoystickOffset.Y && line.Value > 35000 && position.Y > 1)
+                {
+                    position.Y = position.Y - 0.1;
+                }
+                if (line.Offset == JoystickOffset.Y && line.Value < 30000 && position.Y < 140)
+                {
+                    position.Y = position.Y + 0.1;
+                }
+
+                if (_state.Buttons[0] == true)
+                {
+                    Button1.Background = Brushes.Red;
+                }
+                else
+                {
+                    Button1.Background = Brushes.White;
+                }
+                    
             }
         }
 
