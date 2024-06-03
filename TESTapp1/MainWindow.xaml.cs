@@ -106,31 +106,31 @@ namespace TESTapp1
                         switch (i)
                         {
                             case 0:
-                                Button1.Background = Brushes.Red;
+                                Button1.Background = Brushes.Cyan;
                                 break;
                             case 1:
-                                Button2.Background = Brushes.Red;
+                                Button2.Background = Brushes.Cyan;
                                 break;
                             case 2:
-                                Button3.Background = Brushes.Red;
+                                Button3.Background = Brushes.Cyan;
                                 break;
                             case 3:
-                                Button4.Background = Brushes.Red;
+                                Button4.Background = Brushes.Cyan;
                                 break;
                             case 4:
-                                Button5.Background = Brushes.Red;
+                                Button5.Background = Brushes.Cyan;
                                 break;
                             case 5:
-                                Button6.Background = Brushes.Red;
+                                Button6.Background = Brushes.Cyan;
                                 break;
                             case 6:
-                                Button7.Background = Brushes.Red;
+                                Button7.Background = Brushes.Cyan;
                                 break;
                             case 7:
-                                Button8.Background = Brushes.Red;
+                                Button8.Background = Brushes.Cyan;
                                 break;
                             case 8:
-                                Reset.Background = Brushes.Red;
+                                Reset.Background = Brushes.Cyan;
                                 position.Y = 70;
                                 position.X = 70;
                                 break;
@@ -165,7 +165,7 @@ namespace TESTapp1
                                 Button8.Background = Brushes.White;
                                 break;
                             case 8:
-                                Button8.Background = Brushes.White;
+                                Reset.Background = Brushes.White;
                                 break;
                         }
                     }
