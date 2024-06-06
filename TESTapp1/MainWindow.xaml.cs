@@ -130,10 +130,10 @@ namespace TESTapp1
                                 Button8.Background = Brushes.Cyan;
                                 break;
                             case 8:
-                                Button8.Background = Brushes.Cyan;
+                                Button9.Background = Brushes.Cyan;
                                 break;
                             case 9:
-                                Button8.Background = Brushes.Cyan;
+                                Button10.Background = Brushes.Cyan;
                                 break;
                             case 10:
                                 Reset.Background = Brushes.Cyan;
