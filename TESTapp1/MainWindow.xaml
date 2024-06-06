@@ -60,6 +60,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <!--Buttons-->
@@ -79,6 +80,10 @@
             Grid.Column="2" Content="7" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Button8" Width="25" Height="25"  Grid.Row="2"
             Grid.Column="3" Content="8" FontSize="10" Margin="5,5,5,5"/>
+            <Button x:Name="Button9" Width="25" Height="25"  Grid.Row="1"
+            Grid.Column="4" Content="9" FontSize="10" Margin="5,5,5,5"/>
+            <Button x:Name="Button10" Width="25" Height="25"  Grid.Row="2"
+            Grid.Column="4" Content="10" FontSize="10" Margin="5,5,5,5"/>
             <Button x:Name="Reset" Width="25" Height="25" Grid.Row="0"
             Grid.Column="0" Content="Reset" FontSize="9" Margin="5,5,5,5" Click="Reset_Click"/>
             <Button x:Name="Next" Width="25" Height="25" Grid.Row="0"
